@@ -1,0 +1,6 @@
+Here you can find various small codes from my implementation of the algorithm covered in the online Stanford Machine learning course (http://www.ml-class.org)
+
+Currently:
+
+linear-regression/*	contains the implementation in octave of a simple gradient descent algorithm
+
