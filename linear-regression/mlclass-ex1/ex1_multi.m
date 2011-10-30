@@ -86,10 +86,11 @@ fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
 alpha = 0.03;
-num_iters = 150;
+num_iters = 1500;
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(size(X, 2), 1);
+
 [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
 % fprintf('Displaying J_history and theta ...\n');
 % fprintf('theta\n %f \n', theta);
@@ -111,10 +112,8 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-normalized_x1 = (1650-mu(1))/sigma(1)
-normalized_x2 = (3-mu(2))/sigma(2)
-test_X = [1, normalized_x1, normalized_x2];
-price = test_X * theta
+t = [1650, 3];
+price = [1, (t-mu)./sigma] * theta;
 
 
 % ============================================================
