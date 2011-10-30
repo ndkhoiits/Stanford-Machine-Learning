@@ -20,13 +20,26 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+% ====================== OLD ANSWER ==========================
+% h_theta = sigmoid(X * theta);
+% cost = (-y .* log(h_theta)) - ((1-y) .* log(1-h_theta));
+% J = 1/m * sum(cost);
 
+% multiply (h_theta - y) with the identity matrix of size (1 x no. of 
+% features in X) in order to get the right size of the matrix to allow 
+% vector element multiplication .* with X
+% partial_derivative = 1/m * sum( (h_theta - y) * ones(1, size(X, 2)) .* X );
+% grad = partial_derivative';
 
+% ============ NEW ANSWER, better vectorization ==============
+% compute cost
+h_theta = sigmoid(X*theta);
+cost = (y' * log(h_theta)) + ((1-y')*log(1-h_theta));
+J = - (1/m * cost);
 
-
-
-
-
+% compute the usual partial derivatives, without regularization
+partial_derivative = 1/m * (X' * (h_theta - y));
+grad = partial_derivative;
 % =============================================================
 
 end
