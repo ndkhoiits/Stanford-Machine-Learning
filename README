@@ -2,6 +2,6 @@ Here you can find various small codes from my implementation of the algorithm co
 
 Currently:
 
-Unit 01: 	linear-regression/* - Linear regresssion with one/multi variables
-Unit 02: 	logistic-regression/* - Classification using logistic regression 
-
+Programming Exercise 01: linear-regression/* 	- Linear regresssion with one/multi variables
+Programming Exercise 02: logistic-regression/* 	- Classification using logistic regression 
+Programming Exercise 03: neural-network/* 		- Multi-class classification and neural networks
