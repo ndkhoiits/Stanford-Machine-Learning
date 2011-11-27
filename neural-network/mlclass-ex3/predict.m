@@ -25,12 +25,21 @@ p = zeros(size(X, 1), 1);
 a1 = [ones(m, 1) X];
 
 % Calculate the first hidden layer of the NN
+% size(Theta1) = 25 401
+% size(a1) = 5000 401
+% size(a1') = 401 5000
+% size(a2) = size(sigmoid(Theta1 * a1')) = 25 5000
 a2 = sigmoid(Theta1 * a1');
 
 % Add bias unit
+
+% size(a2) = 25 5000
 a2 = [ones(1, m); a2];
 
 % Calculate the output layer of the NN
+% size(a2) = 26 5000
+% size(Theta2) = 10 26
+% size(a3) = size(a2' * Theta2') = 5000 10
 a3 = sigmoid(a2' * Theta2');
 
 % Compute prediction
