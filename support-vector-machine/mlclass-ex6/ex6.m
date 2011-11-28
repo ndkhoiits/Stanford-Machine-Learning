@@ -106,8 +106,7 @@ C = 1; sigma = 0.1;
 % faster. However, in practice, you will want to run the training to
 % convergence.
 
-% uncomment this later !!
-% model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma)); 
+model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma)); 
 visualizeBoundary(X, y, model);
 
 fprintf('Program paused. Press enter to continue.\n');
