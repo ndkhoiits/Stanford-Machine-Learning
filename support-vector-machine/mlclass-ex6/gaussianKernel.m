@@ -16,10 +16,9 @@ sim = 0;
 %
 %
 
-
-
-
-
+% || x1 - x2 || is the euclidean distance, which can also be written as
+% (x1-x2)^2 = (x1-x2)' * (x1-x2)
+sim = exp( -((x1-x2)' * (x1-x2)) / (2*sigma^2) );
 
 % =============================================================
     
