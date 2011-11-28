@@ -1,7 +1,9 @@
-Here you can find various small codes from my implementation of the algorithm covered in the online Stanford Machine learning course (http://www.ml-class.org)
+Here you can find my solutions to the Programming Exercises for the online Stanford Machine learning course (http://www.ml-class.org)
 
-Currently:
+linear-regression/mlclass-ex1 		- Linear regresssion with one/multi variables
+logistic-regression/mlclass-ex2 	- Classification using logistic regression 
+neural-network/mlclass-ex3 			- Multi-class classification and neural networks
+neural-network/mlclass-ex4 			- Neural network learning
+neural-network/mlclass-ex5			- Regularized linear regression and bias-variance (NOT COMPLETED)
+support-vector-machine/mlclass-ex6	- Support Vector Machines
 
-Programming Exercise 01: linear-regression/* 	- Linear regresssion with one/multi variables
-Programming Exercise 02: logistic-regression/* 	- Classification using logistic regression 
-Programming Exercise 03: neural-network/* 		- Multi-class classification and neural networks
