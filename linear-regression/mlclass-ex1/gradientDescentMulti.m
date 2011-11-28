@@ -5,30 +5,24 @@ function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters
 
 % Initialize some useful values
 m = length(y); % number of training examples
-J_history = zeros(num_iters, 1);
+J_history = zeros(num_iters, 1); % list of calculated cost values
 
 for iter = 1:num_iters
 
-    % ====================== YOUR CODE HERE ======================
-    % Instructions: Perform a single gradient step on the parameter vector
-    %               theta. 
-    %
-    % Hint: While debugging, it can be useful to print out the values
-    %       of the cost function (computeCostMulti) and gradient here.
-    %
+	% A better way to compute the partial derivative without using sum 
+	% is using inner product
+	%    (h_theta-y) is a matrix of size 47x1
+	%    X is a matrix of size 47x1 too
+	% Multiply (h_theta-y)' with X to get the dot product, which
+	% sums up the product of each element of (h-theta-y) with X 
+	      
+	h_theta = X * theta;
+	partial_derivative = (h_theta - y)' * X;
 
-    % seems like there's a mistake here ??
-    partial_derivative = sum( (X * theta - y) * ones(1,size(X, 2)) .* X );
+	% actually compute theta
 	theta = theta .- (alpha * 1/m * partial_derivative');
 
-
-
-
-
-
-    % ============================================================
-
-    % Save the cost J in every iteration    
+    % save the cost J in every iteration    
     J_history(iter) = computeCostMulti(X, y, theta);
 
 end
